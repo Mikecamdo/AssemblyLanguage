@@ -1,0 +1,46 @@
+Part 1:
+
+a) Decimal:
+
+Total points scored by SMU: 461
+
+Total points scored by opponents: 341
+
+b) Binary:
+
+Total points scored by SMU: 0001110011012
+
+Total points scored by opponents: 0001010101012
+
+c) 0001110011012
+
++ 0001010101012
+
+= 0011001000102
+
+d) 0011001000102 = 2 + 32 + 256 + 512 = 80210
+
+e) 461 + 341 = 802 == 802
+
+The result from part d) is the same as the sum of the two decimal numbers in part a)
+
+ 
+
+Part 2:
+
+a) The function arguments are passed from the C code into the assembly function code by placing their values in registers R0 - R2.
+
+The function return value is expected to be in register R0.
+
+b) Updated values in source code
+
+c) Uploaded source code
+
+d) Changed a, b, c, and d to equal 0x3FFFFFED. Both sum1() and sum2() returned 0x0
+
+e) xPSR value before ADD: 810F0000
+
+xPSR value after ADD: 610F0000
+
+The first number in the xPSR register changes from 8 to 6. This means in binary, the value is changing from 1000 to 0110. This means Bits 31, 30, and 29 are changing (with Bit 31, or the Negative/Less than flag, changing from 1 to 0, Bit 30, or the Zero flag, changing from 0 to 1, and Bit 29, or the Carry/Borrow flag, changing from 0 to 1).
+

@@ -1,0 +1,22 @@
+Testing Calculations:
+
+Decimal: 15 + 7 = 22
+
+Hex: 12 + 2F = 41
+
+Binary: 10000001 + 10001110 = 100001111
+
+ 
+
+Updated Hex:
+
+1A + 3D
+
+R0: 0000001A
+
+R1: 0000003D
+
+Similarity: R0 and R1 are the values I entered into the calculator
+
+Memory location of the SVC: 08000B58
+
