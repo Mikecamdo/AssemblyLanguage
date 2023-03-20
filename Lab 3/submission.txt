@@ -1,0 +1,94 @@
+Part 1:
+
+a) To find the 2's complement of any binary number, first flip each bit (so every 0 becomes 1 and every 1 becomes 0). Then add 1.
+
+b) I expect that the subtraction 42 - 42 would result in a value of 0. 
+
+42 + the 2's complement of 42:
+
+4210 = 001010102 
+
+2's complement of 42:
+
+     Flip all bits: 110101012 
+
+     Add one: 110101102 
+
+     001010102 
+
++   110101102 
+
+= 1000000002 
+
+In an 8 bit register, the leading 1 would be lost (as it's not within the 8 bit limit); thus, the result would be 000000002 = 010 
+
+The carry bit is the leading 1 from the above result; it goes into the carry flag, resulting in a value of 0.
+
+c) 85 + 42
+
+8510 = 010101012 
+
+4210 = 001010102 
+
+   010101012 
+
++ 001010102 
+
+= 011111112 = 12710 
+
+The sign bit is the leftmost bit (which in this case is 0, indicating a positive number)
+
+d) (-86) - (42)
+
+-8610 = 2's complement of 010101102 =  101010102 
+
+4210 = 001010102 
+
+  101010102 
+
+- 001010102 
+
+= 100000002 = -12810 
+
+The sign bit is the leftmost bit (which in this case is 1, indicating the number is negative). Since the rest of the bits are 0, and we have a negative number (according to the sign bit), the value must equal -128.
+
+Part 2:
+
+a) Total number of offensive plays run by SMU: 890
+
+Total number of offensive plays run by opponents: 842
+
+b) 89010 = 0011011110102 
+
+84210 = 0011010010102 
+
+c) 2's complement of 0011011110102 = 1100100001102 
+
+2's complement of 0011010010102 = 1100101101102 
+
+d) 890 - 842; to get the value, add the binary of 890 to the 2's complement of 842's binary value:
+
+    0011011110102 
+
++ 1100101101102 
+
+= 0000001100002 
+
+e) 0000001100002 = 4810 
+
+f) 890 - 842 = 48 (the same result from part e)
+
+g) To be able to be represented in a 12 bit signed integer, a value cannot be greater that 2047 (which is equal to 211 - 1). Thus, the opponents rushing yards could be represented in a 12 bit signed integer (as 1926 < 2047), while SMU's rushing yards could not be represented in a 12 bit signed integer (as 2175 > 2047)
+
+Part 3:
+
+a)
+
+b)
+
+c) Before the subs instruction, R2 has a value of 0. After the first subs instruction, the 2's complement of 4210 is in R2. R3 thus contains the 2's complement of the negative result. After the second subs instruction runs, R0 and R3 should have the same value. The function return value will compute the original value of the 2's complement it contains.
+
+d) Yes, each register contains the values I expected them to. The 32-bit hex values are consistent with the class example. After the second subs instruction, the xPSR register value is 8; the function return value is FFFFFFE7.
+
+e) a - b would result in a decimal value of 2147483648 if we had unlimited bit width. However, in 32-bit arithmetic, the largest positive value allowed is 2147483647 (1 less than a - b). Now after the second subs instruction, the xPSR register has a condition flag of 9; the function return value is 0x80000000. 
+

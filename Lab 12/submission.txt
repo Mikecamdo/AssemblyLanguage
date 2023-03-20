@@ -1,0 +1,16 @@
+b) Lines 34-37 enable the Timer 3 peripheral clock
+
+Lines 42-44 set the Timer 3 prescaler value
+
+Lines 49-50 set the Timer 3 auto-reload value
+
+Lines 64-67 enable the Timer 3 update interrupt (after clearing the pre-existing Timer 3 update interrupt in lines 58-61)
+
+Lines 70-73 enable the Timer 3 global interrupt vector
+
+The value stored into the Timer 3 auto-reload register originates from R0 (as it is passed into the function as an argument from the C program).
+
+d) Video clip is submission 1, code is submission 2.
+
+g) A timeslice of about 10 milliseconds (or 0.01 seconds) is the greatest time slice value that gives a smooth multitasking in my operating system.
+

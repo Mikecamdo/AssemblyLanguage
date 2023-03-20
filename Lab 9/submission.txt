@@ -1,0 +1,5 @@
+Part 1:
+
+a) The bit position that was different was the third bit from the left (the bit with a value of 1 in the following binary: 0010 0000)
+
+The photo is the first submission and the code is the second submission

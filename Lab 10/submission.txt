@@ -1,0 +1,32 @@
+a) The expected determinant of the matrix is:
+
+4 * 8 - 3 * 6
+
+32 - 18 = 14
+
+Thus, the expected determinant is 14 (which is what the determinant function returned). Picture is Submission 1, Code Upload is Submission 2.
+
+b) Done
+
+c) For the given matrix, the expected determinant is:
+
+1.75 * (-1) - 3.5 * (-0.5)
+
+-1.75 - (-1.75) = 0
+
+Thus, the expected determinant is 0 (making the matrix singular). This is confirmed by the program. We can also confirm this by observing the following rule: "A matrix is singular if multiplying all the elements in one matrix row by some constant will give all the elements in another row." If we multiply the second row of the matrix (which contains the values -0.5 and -1.0) by -3.5, then we obtain the same values as the first row of the matrix:
+
+-0.5 * -3.5 = 1.75
+
+-1.0 * -3.5 = 3.5
+
+Since multiplying the second row by the constant -3.5 gives all the elements of the first row, we have confirmed that the matrix is singular (and thus the determinant value is 0, as we calculated earlier).
+
+d) Using the same principle from part c, we find that multiplying the first row by -7 gives all the elements of the second row:
+
+0.1 * -7 = -0.7
+
+0.6 * -7 = -4.2
+
+Thus, the matrix is singular and the determinant is 0. However, this is not consistent with the numerical results of my code. This is because of rounding errors when dealing with floating point arithmetic; this causes the result to be really close to 0, but not exactly 0. Thus, the program is wrong in this instance (due to the inability of the program to effectively compute the values without having rounding errors).
+

@@ -1,0 +1,8 @@
+Part 1:
+
+a) I came very close to 180,000 cycles (I got 180,026 cycles). I achieved this by using 15 'NOP' instructions. The instruction in the loop that requires more than one pipeline cycle time is the 'BGT' instruction. This is because it has to clear the pipeline when it branches, which takes an extra cycle time.
+
+b) Photo is submission 1, code is submission 2.
+
+c) Video clip is submission 3, code is submission 4.
+

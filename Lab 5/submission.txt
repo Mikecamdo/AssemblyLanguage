@@ -1,0 +1,56 @@
+Part 1:
+
+a) 0x1FFFFFFF = 000111111111111111111111111111112 
+
+1's range from 20 to 228 , so 229 - 1 = 536870911 addressable locations
+
+b) 2 MBytes = 16000000 bits
+
+ARM Cortex M-4 has 32-bit addressing:
+
+16000000 / 32 = 500000 addresses
+
+500000 /  536870911 * 100 = 0.09% of the address space
+
+Part 2:
+
+a) The value displayed by the main program is 0x410FC241. This lines up with the expected value from the ARM Cortex-M4 manual:
+
+Implementer = 0x41: Arm
+
+Variant = 0x0: revision 0
+
+Constant = 0xF
+
+PartNo = 0xC24: Cortex-M4
+
+Revision = 0x1: patch 1
+
+(which all together is 0x410FC241).
+
+5 instructions contribute to the .text segment by this module. They are encoded as 32-bit instructions. The constant 0xE000ED00 is located at address E000ED00.
+
+b) Pixel word: 0xFFFFFFFF. This color corresponds to COLOR_WHITE, which is what I expect at coordinate (100,150) (as that's the middle of the screen, which is all white).
+
+c) Pixel word: 0xFF0000FF
+
+This corresponds to COLOR_BLUE, which is expected as (0,0) is the top left corner of the screen (which is blue).
+
+d) Pixel word: 0xFF0000FF
+
+This corresponds to COLOR_BLUE, which is expected as (239,319) is the bottom right corner of the screen (which is blue).
+
+e)
+
+f) Uploaded code is Submission 1. Cell phone photo is Submission 2.
+
+Part 3:
+
+a) 
+
+b) The required left shift count needed to index each word element is: LSL #2
+
+Both functions return the correct average (which is 21632; calculating the average by hand gives 21632.75, so the .75 is truncated)
+
+Uploaded code is Submission 3.
+

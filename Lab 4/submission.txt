@@ -1,0 +1,79 @@
+Part 1:
+
+a) 0xC3C3C3C3 = 110000111100001111000011110000112 
+
+b) Shifted left by one position: 100001111000011110000111100001102 
+
+Expressed in hex: 0x87878786
+
+c) Shifted back right by one position: 010000111100001111000011110000112 
+
+Expressed in hex: 0x43C3C3C3
+
+d) Shifted back right by one position (using ASR): 110000111100001111000011110000112 
+
+Expressed in hex: 0xC3C3C3C3
+
+e) Shifted left by two positions: 000011110000111100001111000011002 
+
+Expressed in hex: 0x0F0F0F0C
+
+f) Shifted back right by two positions: 000000111100001111000011110000112 
+
+Expressed in hex: 0x03C3C3C3
+
+g) Shifted back right by two positions (using ASR): 000000111100001111000011110000112 
+
+Expressed in hex: 0x03C3C3C3
+
+h) 368 / 42 = 8.761904762...
+
+Integer quotient: 8
+
+Integer remainder: 32
+
+Part 2:
+
+a) Completed
+
+b) Completed
+
+c) ufunc debug hex value: 0x87878786
+
+ufunc return hex value: 0x43C3C3C3
+
+sfunc debug hex value: 0x87878786
+
+sfunc return hex value: 0xC3C3C3C3
+
+As expected, the debug hex value for both ufunc and sfunc match the hex value I predicted in part 1b. The ufunc return hex value matches the hex value I predicted in part 1c (as expected), and the sfunc return hex value matches the hex value I predicted in part 1d (as expected). The code for part c) is my first submission.
+
+d) ufunc debug hex value: 0x0F0F0F0C
+
+ufunc return hex value: 0x03C3C3C3
+
+sfunc debug hex value: 0x0F0F0F0C
+
+sfunc return hex value: 0x03C3C3C3
+
+As expected, the debug hex value for both ufunc and sfunc match the hex value I predicted in part 1e. The ufunc return hex value matches the hex value I predicted in part 1f (as expected), and the sfunc return hex value matches the hex value I predicted in part 1g (as expected).
+
+e) To extrapolate the statistics over four quarters, the shift count arguments should be 2 (as each bit shift left multiplies the value by 2, and we want to multiply the value by 4 (as there are 4 quarters)).
+
+ufunc decimal return value: 56
+
+sfunc decimal return value: -64
+
+Expected values:
+
+4 * 14 = 56
+
+4 * -16 = -64
+
+Thus, as expected, the program's decimal returns values are the same as the expected values.
+
+f) ufunc decimal return value: 32
+
+sfunc decimal return value: -32
+
+In part 1h, I predicted the remainder of 368 / 42 to be 32. This matches the value found by ufunc (which found the remainder of 368 / 42). This also verifies that sfunc worked correctly, as the remainder of -368 / -42 will be the same as 368 / 42 but with a negative sign. Since sfunc returned a value of -32, this matches my prediction from 1h. The code for part f) is my second submission.
